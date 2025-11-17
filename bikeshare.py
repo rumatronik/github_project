@@ -230,6 +230,7 @@ def user_stats(df):
         print('\n>> Counts of gender:\n', gender);
     except KeyError:
         print('\n>> Counts of gender cannot be calculated!\n')
+        print('\n>> Hint: Maybe the gender column is not available in the dataset\n')
 
     # Display earliest, most recent, and most common year of birth
     try:        
@@ -237,6 +238,7 @@ def user_stats(df):
         print('\n>> Counts of birth year:\n', birth_year);
     except KeyError:
         print('\n>> Counts of birth year cannot be calculated!\n')
+        print('\n>> Hint: Maybe the birth year column is not available in the dataset\n')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
