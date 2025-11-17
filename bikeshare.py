@@ -51,7 +51,7 @@ def get_filters():
         data_filter_input = input('\nPlease enter a valid filter:\n - Day\n - Month\n - Both\n').lower()
         matching_data_filter = [d for d in data_filters if data_filter_input in d]
         if not matching_data_filter:
-            print('Data filter not valid!\n')
+            print('Data filter', data_filter_input,' not valid!\n')
         else:
             data_filter = matching_data_filter[0]
             print('>> Selected Filter: ', data_filter.capitalize())
@@ -62,7 +62,7 @@ def get_filters():
         print(MONTH_DATA)
         month = input('\nPlease enter a valid month number:\n')
         if month not in MONTH_DATA:
-            print('Month not valid!\n')
+            print('Month ', month,'not valid!\n')
         else:
             break
    
@@ -71,7 +71,7 @@ def get_filters():
         print(DAY_DATA)
         day = input('\nPlease enter a valid day number:\n')
         if day not in DAY_DATA:
-            print('Day not valid!\n')
+            print('Day ', day,'not valid!\n')
         else:             
             break
 
